@@ -1,0 +1,18 @@
+Problem:
+Given the participants' score sheet for your University Sports Day, you are required to find the runner-up score.
+You are given scores. Store them in a list and find the score of the runner-up.
+
+
+Code:
+if __name__ == '__main__':
+    n = int(raw_input())
+    arr = map(int, raw_input().split())
+    x=max(arr)
+    arr.sort()
+    arr.reverse()
+    for i in range(len(arr)):
+        if arr[i]==arr[i+1]:
+            continue
+        else:
+            print arr[i+1]
+            break
