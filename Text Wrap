@@ -1,0 +1,22 @@
+Problem:
+You are given a string and width .
+Your task is to wrap the string into a paragraph of width .
+
+Code:
+import textwrap
+
+def wrap(string, max_width):
+    if 0<len(string)<1000:
+        if 0<max_width<len(string):
+            my_wrap = textwrap.TextWrapper(width = max_width)
+            wrap_list = textwrap.dedent(text=string)
+            wrap = my_wrap.fill(text=wrap_list)
+    
+                
+    
+    return wrap
+
+if __name__ == '__main__':
+    string, max_width = raw_input(), int(raw_input())
+    result = wrap(string, max_width)
+    print result
