@@ -1,0 +1,22 @@
+Problem:
+ABC is a right triangle, at B.
+Therefore, angle ABC=90°.
+Point M is the midpoint of hypotenuse AC.
+You are given the lengths AB and BC.
+Your task is to find angle MBC,in degrees.
+
+Code:
+import math
+pi=math.pi
+ab=input()
+bc=input()
+if 0<ab<100:
+    if 0<bc<100:        
+        ac=math.sqrt(ab**2 + bc**2)
+        mc=ac/2   
+        x=mc/bc     
+        rad=math.asin(x)
+        degree=int(round(rad*180/pi))
+        print "%s°" %degree
+        
+        
